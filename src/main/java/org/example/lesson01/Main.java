@@ -1,4 +1,6 @@
-package org.example;
+package org.example.lesson01;
+
+import org.example.lesson02.CezarCipher;
 
 public class Main {
 
@@ -16,5 +18,9 @@ public class Main {
         Beer beer = new Beer("Lech");
         second.drinkBeer(beer);
         System.out.println("Dringing in main " + beer);
+
+        System.out.println(CezarCipher.encryptReverse("abcdefg hijklmno  pqrstuvwxyz!"));
+
+
     }
 }

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.lesson01;
 
 public class Beer {
 
