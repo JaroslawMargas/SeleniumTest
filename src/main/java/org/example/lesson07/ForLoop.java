@@ -24,10 +24,24 @@ public class ForLoop {
         int max = 0;
         for (int i = 0; i < numQuantity; i++) {
             int number = scanner.nextInt();
-            if(number%4 == 0 && number > max){
+            if (number % 4 == 0 && number > max) {
                 max = number;
             }
         }
         return max;
+    }
+
+    public static float countAvgDivThree(int start, int stop) {
+        int count = 0;
+        int sum = 0;
+        if (stop > start) {
+            for (; start <= stop; start++) {
+                if (start % 3 == 0) {
+                    sum += start;
+                    count += 1;
+                }
+            }
+        }
+        return (float) sum / count;
     }
 }
