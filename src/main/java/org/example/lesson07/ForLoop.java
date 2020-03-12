@@ -1,7 +1,9 @@
 package org.example.lesson07;
 
+import java.util.Scanner;
+
 public class ForLoop {
-    public static void FizzBuzz(int start, int stop) {
+    public static void fizzBuzz(int start, int stop) {
         if (stop > start) {
             for (; start <= stop; start++) {
                 if (start % 5 == 0 && start % 3 == 0) {
@@ -15,5 +17,17 @@ public class ForLoop {
                 }
             }
         }
+    }
+
+    public static int maxDivFour(int numQuantity) {
+        Scanner scanner = new Scanner(System.in);
+        int max = 0;
+        for (int i = 0; i < numQuantity; i++) {
+            int number = scanner.nextInt();
+            if(number%4 == 0 && number > max){
+                max = number;
+            }
+        }
+        return max;
     }
 }
