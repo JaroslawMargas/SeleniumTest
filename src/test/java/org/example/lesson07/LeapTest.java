@@ -8,10 +8,10 @@ class LeapTest {
 
     @Test
     void checkLeapYear() {
-        assertEquals("Leap", Leap.checkLeapYaar(2000));
+        assertEquals("Leap", Conditional.checkLeapYear(2000));
     }
     @Test
     void checkRegularYear(){
-        assertEquals("Regular", Leap.checkLeapYaar(2100));
+        assertEquals("Regular", Conditional.checkLeapYear(2100));
     }
 }
