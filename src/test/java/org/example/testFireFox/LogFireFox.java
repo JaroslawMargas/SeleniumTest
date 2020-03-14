@@ -30,6 +30,7 @@ class LogFireFox {
 
         assertEquals("Kokpit - TestArena Demo", driver.getTitle());
 
+        //Xpath=//tagname[@attribute='value']
         driver.findElement(By.xpath("//a[@href='http://demo.testarena.pl/wyloguj']")).click();
 
         assertEquals("TestArena Demo", driver.getTitle());
