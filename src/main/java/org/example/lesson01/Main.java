@@ -6,7 +6,10 @@ import org.example.lesson04.TypeOperator;
 import java.util.Scanner;
 import java.util.List;
 
+
 public class Main {
+
+
 
 //    int variable =  5;
     static Scanner scanner = new Scanner(System.in);
