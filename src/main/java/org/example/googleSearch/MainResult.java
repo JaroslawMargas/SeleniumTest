@@ -1,25 +1,17 @@
-package org.example.google;
+package org.example.googleSearch;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
+public class MainResult {
 
-public class ExampleSearchTest {
-
-    @Test
-    void displayGoogleResultTest() {
-        String googleText = "what to type in input google";
+    public static void displayGoogleResultTest(String googleText) {
 
         System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 
