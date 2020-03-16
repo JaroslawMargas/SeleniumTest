@@ -3,7 +3,11 @@ package org.example.googleSearch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -13,9 +17,18 @@ public class MainResult {
 
     public static void displayGoogleResultTest(String googleText) {
 
-        System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless",
+                "--disable-gpu",
+                "--window-size=1366,1200",
+                "--ignore-certificate-errors",
+                "--silent");
 
-        WebDriver driver = new FirefoxDriver();
+        // download compatible chromedriver to Chrome version
+        // https://chromedriver.chromium.org/downloads
+        System.setProperty("webdriver.gecko.driver", "chromedriver.exe");
+
+        WebDriver driver = new ChromeDriver(options);
 
         driver.get("http://google.com");
 
