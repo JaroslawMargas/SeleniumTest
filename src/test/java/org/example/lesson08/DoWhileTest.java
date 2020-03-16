@@ -17,4 +17,9 @@ class DoWhileTest {
         List<Integer> expected = List.of(17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1);
         assertEquals(expected, DoWhile.collatz(17));
     }
+
+    @Test
+    void countDepositInYear() {
+        assertEquals(2, DoWhile.countDepositInYear(100,15,120));
+    }
 }
