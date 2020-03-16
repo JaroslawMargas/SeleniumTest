@@ -8,14 +8,9 @@ import java.util.List;
 
 
 public class Main {
-
-
-
-//    int variable =  5;
-    static Scanner scanner = new Scanner(System.in);
-
+    
     public static void main(String[] args){
-
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Hello Jonh !");
 //        var third = "aaa";
         var second = new Second();
