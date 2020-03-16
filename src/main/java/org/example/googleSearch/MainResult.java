@@ -1,4 +1,5 @@
 package org.example.googleSearch;
+import java.util.Scanner;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -45,7 +46,7 @@ public class MainResult {
         By addItem = By.xpath("//div[@class='rc']");
         wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
 
-        // make screenshoot
+//        make screenshoot
 //        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 //        File out = new File("screen.png");
 //        FileUtils.copyFile(screenshot, out);
@@ -64,3 +65,4 @@ public class MainResult {
         driver.close();
     }
 }
+
