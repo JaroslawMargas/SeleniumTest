@@ -1,8 +1,7 @@
 package org.example.googleSearch;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,11 +10,13 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class MainResult {
 
-    public static void displayGoogleResultTest(String googleText) {
+    public static void displayGoogleResultTest(String googleText) throws IOException {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless",
@@ -43,6 +44,11 @@ public class MainResult {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         By addItem = By.xpath("//div[@class='rc']");
         wait.until(ExpectedConditions.presenceOfElementLocated(addItem));
+
+        // make screenshoot
+//        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//        File out = new File("screen.png");
+//        FileUtils.copyFile(screenshot, out);
 
         // what to find
         By descriptionTextXPath = By.xpath("//*[@class='r']//a//h3");
