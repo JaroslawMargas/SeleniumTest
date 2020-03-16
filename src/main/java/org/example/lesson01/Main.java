@@ -8,11 +8,11 @@ import java.util.List;
 
 
 public class Main {
-    
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello Jonh !");
-//        var third = "aaa";
+
         var second = new Second();
         second.doPrint();
         System.out.println("Second " + second.number);
