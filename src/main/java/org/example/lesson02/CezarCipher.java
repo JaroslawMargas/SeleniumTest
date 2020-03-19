@@ -23,11 +23,5 @@ public class CezarCipher {
         }
         return result;
     }
-
-
-    public static void shiftMessageKey(){
-        int var = 4%3;
-        System.out.println(var);
-    }
 }
 
