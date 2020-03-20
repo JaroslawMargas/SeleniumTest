@@ -7,12 +7,12 @@ public class BusTrip {
 
         String res = null;
 
-        for (int i = 0 ; i< Integer.parseInt(bridgeNum) ; ++i) {
+        for (int i = 0; i < Integer.parseInt(bridgeNum); ++i) {
             if (Integer.parseInt(centBusHeight) < Integer.parseInt(bridges[i])) {
                 res = "Will not crash";
             } else {
-                int bridgeCrash = i+1;
-                res = "Will crash on bridge "+bridgeCrash;
+                int bridgeCrash = i + 1;
+                res = "Will crash on bridge " + bridgeCrash;
                 break;
             }
         }
