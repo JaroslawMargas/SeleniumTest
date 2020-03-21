@@ -9,7 +9,7 @@ public class SequenceNum {
         boolean stop = false;
         int counter = 0;
         if (num > 0) {
-            for (int i = 0; i <= num && !stop; ++i) {
+            for (int i = 0; i <= num && !stop; i++) {
                 for (int j = 0; j < i; ++j) {
                     if (counter == num) {
                         stop = true;
