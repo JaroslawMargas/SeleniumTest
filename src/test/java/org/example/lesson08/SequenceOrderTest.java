@@ -61,4 +61,9 @@ class SequenceOrderTest {
     void checkSeq10() {
         assertTrue(SequenceOrder.checkSeq("1 2 3 4 0 1 2 3"));
     }
+
+    @Test
+    void checkSeq11() {
+        assertTrue(SequenceOrder.checkSeq("0"));
+    }
 }
