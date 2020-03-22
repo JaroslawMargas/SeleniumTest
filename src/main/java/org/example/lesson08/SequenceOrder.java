@@ -3,53 +3,30 @@ package org.example.lesson08;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class SequenceOrder {
 
+    private static final Pattern PATTERN = Pattern.compile(" ");
+
     public static boolean checkSeq(String numberString) {
-        boolean result = false;
-        List<Integer> intList = new ArrayList<>();
-
-        String[] numbersArray = numberString.split(" ");
-
-        for (String num : numbersArray) {
-            int number = Integer.parseInt(num);
-            if (number != 0) {
-                intList.add(number);
+        String[] numbersArray = PATTERN.split(numberString);
+        List<Integer> numbers = new ArrayList<>(numbersArray.length);
+        List<Integer> sortedNumbers = new ArrayList<>();
+        for (String s : numbersArray) {
+            int i = Integer.parseInt(s);
+            if (i == 0) {
+                // zero ends input
+                break;
             }
+            numbers.add(i);
+            sortedNumbers.add(i);
         }
-
-        // copy of list
-        List<Integer> listSorted = new ArrayList<>(intList);
-        // sort copy
-        Collections.sort(listSorted);
-
-        //iterate through list
-        for (Integer itmList : intList) {
-            // if first < any next
-            if (intList.get(0) < itmList) {
-                // check if list = sortedList
-                if (intList.equals(listSorted)) {
-                    result = true;
-                    break;
-                }
-            }
-
-            // if first > any next
-            if (intList.get(0) > itmList) {
-                // reverse sortedList
-                Collections.reverse(listSorted);
-                // check if list = reversed sortedList
-                if (intList.equals(listSorted)) {
-                    result = true;
-                    break;
-                }
-            }
-
-            // if all elements are the same
-            // if (occurrence element [0] in intList == size List) -> true
-            result = Collections.frequency(intList, intList.get(0)) == intList.size();
+        Collections.sort(sortedNumbers);
+        if (numbers.equals(sortedNumbers)) {
+            return true;
         }
-        return result;
+        sortedNumbers.sort(Collections.reverseOrder());
+        return numbers.equals(sortedNumbers);
     }
 }
