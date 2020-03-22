@@ -18,7 +18,6 @@ public class Main {
         System.out.println("Second " + second.number);
         second.setNumber(10);
         System.out.println("Second " + second.number);
-
         Beer beer = new Beer("Lech");
         second.drinkBeer(beer);
         System.out.println("Dringing in main " + beer);

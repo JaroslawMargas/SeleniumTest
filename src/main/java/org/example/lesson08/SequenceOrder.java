@@ -3,6 +3,7 @@ package org.example.lesson08;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class SequenceOrder {
@@ -28,5 +29,32 @@ public class SequenceOrder {
         }
         sortedNumbers.sort(Collections.reverseOrder());
         return numbers.equals(sortedNumbers);
+    }
+
+    public static void checkSeqScanner() {
+        /*
+        // this is the same task as "SequenceOrder" but with Scanner input and System.out.print
+         */
+        List<Integer> numbers = new ArrayList<>();
+        List<Integer> sortedNumbers = new ArrayList<>();
+
+        Scanner sc = new Scanner(System.in);
+        int num;
+
+        do {
+            num = sc.nextInt();
+            if (num != 0) {
+                numbers.add(num);
+                sortedNumbers.add(num);
+            }
+        } while (num != 0);
+
+        Collections.sort(sortedNumbers);
+        if (numbers.equals(sortedNumbers)) {
+            System.out.print(true);
+        } else {
+            sortedNumbers.sort(Collections.reverseOrder());
+            System.out.print(numbers.equals(sortedNumbers));
+        }
     }
 }

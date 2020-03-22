@@ -6,7 +6,7 @@ public class ForLoop {
     public static void fizzBuzz(int start, int stop) {
         if (stop > start) {
             for (; start <= stop; start++) {
-                if (start % 5 == 0 && start % 3 == 0) {
+                if (start % 15 == 0) {
                     System.out.println("FizzBuzz");
                 } else if (start % 3 == 0) {
                     System.out.println("Fizz");
@@ -15,6 +15,26 @@ public class ForLoop {
                 } else {
                     System.out.println(start);
                 }
+            }
+        }
+    }
+
+    public static void fizzBuzzTwo(int start, int stop) {
+        if (stop > start) {
+            for (; start <= stop; start++) {
+
+                String out = "";
+
+                if (start % 3 == 0) {
+                    out += "Fuzz";
+                }
+                if (start % 5 == 0) {
+                    out += "Buzz";
+                }
+                if (out.isEmpty()) {
+                    out = String.valueOf(start);
+                }
+                System.out.println(out);
             }
         }
     }
