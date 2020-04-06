@@ -1,6 +1,6 @@
 package org.example.lesson09;
 
-public class OrderString {
+public class StringOperation {
     public static boolean checkOrder(String str) {
         String mySimple = "abcdefghijklmnopqrstuvwxyz";
         char first = str.charAt(0);
@@ -15,6 +15,12 @@ public class OrderString {
         }else {
             result = true;
         }
+        return result;
+    }
+    public static String convertDate(String str){
+        String[] words = str.split("-");
+        String result;
+        result = words[1] + "/" + words[2] + "/" + words[0];
         return result;
     }
 }
