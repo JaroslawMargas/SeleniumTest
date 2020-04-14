@@ -19,8 +19,6 @@ dependencies {
     testCompile("io.github.bonigarcia:webdrivermanager:3.5.0")
     implementation("org.seleniumhq.selenium:selenium-java:3.141.59")
     implementation("io.github.bonigarcia:webdrivermanager:3.5.0")
-    compile group: 'org.bytedeco', name: 'javacv-platform', version: '1.5.2'
-
 }
 
 compileTestJava {
